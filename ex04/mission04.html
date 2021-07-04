@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Hello Vue</title>
+        <!-- vue CDN에 연결 -->
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    </head>
+    <body>
+        <div id="main">
+            <ul>
+                <li v-for="(item, index) in Members">
+                    <p>번호 : {{ index }}</p>
+                    <p>이름 : {{ item.name }}</p>
+                    <p>나이 : {{ item.age }}</p>
+                </li>
+            </ul>
+        </div>
+        <script>
+            //  Vue 객체를 생성해 앱을 초기화하고 시작
+            new Vue({
+                // id 선택자인 main의 div 엘리먼트와 앱을 연결해서 구동
+                el: "#main",
+                data: {
+                    Members: [
+                        {
+                            id: 0,
+                            name: "홍길동",
+                            age: 27,
+                        },
+                        {
+                            id: 1,
+                            name: "이순신",
+                            age: 30,
+                        },
+                        {
+                            id: 2,
+                            name: "김유신",
+                            age: 40,
+                        },
+                    ],
+                },
+            });
+        </script>
+    </body>
+</html>

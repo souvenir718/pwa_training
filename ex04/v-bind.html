@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Hello Vue</title>
+        <!-- vue CDN에 연결 -->
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <style>
+            .blue_style {
+                color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="main">
+            <h1 v-bind:class="sColorName + '_style'">안녕하세요!</h1>
+            <input :value="sDate" />
+        </div>
+        <script>
+            //  Vue 객체를 생성해 앱을 초기화하고 시작
+            new Vue({
+                // id 선택자인 main의 div 엘리먼트와 앱을 연결해서 구동
+                el: "#main",
+                data: {
+                    sDate: "올해 연도: " + new Date().getFullYear(),
+                    sColorName: "blue",
+                },
+            });
+        </script>
+    </body>
+</html>

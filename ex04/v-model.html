@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Hello Vue</title>
+        <!-- vue CDN에 연결 -->
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    </head>
+    <body>
+        <div id="main">
+            <p>{{ sMsg }}</p>
+            <input v-model:value="sMsg" />
+        </div>
+        <script>
+            //  Vue 객체를 생성해 앱을 초기화하고 시작
+            var main = new Vue({
+                // id 선택자인 main의 div 엘리먼트와 앱을 연결해서 구동
+                el: "#main",
+                data: {
+                    sMsg: "안녕하세요",
+                },
+            });
+        </script>
+    </body>
+</html>
