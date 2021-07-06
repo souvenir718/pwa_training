@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Hello Vue</title>
+        <!-- vue CDN에 연결 -->
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <style>
+            .fruit_style {
+                border: 1px solid #ccc;
+                background-color: white;
+                padding-left: 1em;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="main">
+            <h1>{{ sTitle }}</h1>
+            <favorite-fruits></favorite-fruits>
+        </div>
+        <script>
+            Vue.component("favorite-fruits", {
+                data: function () {
+                    return {
+                        aFruits: [{ sFruit_name: "사과" }, { sFruit_name: "포도" }, { sFruit_name: "오렌지" }],
+                    };
+                },
+                template: `
+                <div>
+                    <div v-for="item in aFruits" class="fruit_style">
+                        <p>좋아하는 과일: {{ item.sFruit_name }}</p>
+                    </div>
+                </div>
+                `,
+            });
+            //  Vue 객체를 생성해 앱을 초기화하고 시작
+            new Vue({
+                // id 선택자인 main의 div 엘리먼트와 앱을 연결해서 구동
+                el: "#main",
+                data: {
+                    sTitle: "안녕하세요!",
+                },
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Hello Vue</title>
+        <!-- vue CDN에 연결 -->
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <script>
+            Vue.component("favorite-fruits", {
+                props: ["fruit"],
+                template: `<li>{{ fruit.text }} </li>`,
+            });
+        </script>
+    </head>
+    <body>
+        <div id="app">
+            <h1>좋아하는 과일!</h1>
+            <ol>
+                <favorite-fruits v-for="item in aFruits" v-bind:fruit="item" v-bind:key="item.id"></favorite-fruits>
+            </ol>
+        </div>
+        <script>
+            //  Vue 객체를 생성해 앱을 초기화하고 시작
+            var app = new Vue({
+                // id 선택자인 main의 div 엘리먼트와 앱을 연결해서 구동
+                el: "#app",
+                data: {
+                    aFruits: [
+                        { id: 0, text: "사과" },
+                        { id: 1, text: "오렌지" },
+                        { id: 2, text: "수박" },
+                    ],
+                },
+            });
+        </script>
+    </body>
+</html>
