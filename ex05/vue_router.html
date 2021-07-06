@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Hello Vue</title>
+        <!-- vue CDN에 연결 -->
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <!-- 라우터를 사용하기 위한 CDN -->
+        <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <h1>Test</h1>
+            <!-- 현재 라우터 위치의 컴포넌트 렌더링 -->
+            <router-view></router-view>
+            <hr />
+            <p>
+                라우터 사용 :
+                <router-link to="/main">메인페이지 이동</router-link>
+                <router-link to="/sub">서브페이지 이동</router-link>
+            </p>
+        </div>
+        <script>
+            const tmMain = {
+                template: "<h2>메인 페이지입니다. </h2>",
+            };
+            const tmSub = {
+                template: "<h2>서브 페이지입니다. </h2>",
+            };
+            const rtRoutes = [
+                {
+                    path: "/main",
+                    component: tmMain,
+                },
+                {
+                    path: "/sub",
+                    component: tmSub,
+                },
+            ];
+            const router = new VueRouter({
+                routes: rtRoutes,
+            });
+            //  Vue 객체를 생성해 앱을 초기화하고 시작
+            var gApp = new Vue({
+                // id 선택자인 main의 div 엘리먼트와 앱을 연결해서 구동
+                el: "#app",
+                router,
+            });
+        </script>
+    </body>
+</html>
