@@ -281,3 +281,26 @@ var gApp = new Vue({
 });
 </script>
 ```
+
+
+
+## Vue Cli
+
+### 프로젝트 생성
+
+```
+vue create example_project
+```
+
+
+
+### 프로젝트 옵션
+
+| 질문                                       | 참고                                                    |
+| ------------------------------------------ | ------------------------------------------------------- |
+| Please pick a preset                       | 신규 템플릿을 기본으로 할지 사용자 정의로 할지 결정     |
+| Check the features needed for your project | Babel, typescript, PWA 등 다양한 기능으로 선택 가능     |
+| Use history mode for router                | 라우터에서 히스토리 모드 사용 여부 결정                 |
+| Where do you prefer placing config...      | 설정값을 confg 파일과 package.json 중 어디서 할지 결정  |
+| Save this preset                           | 지금까지 선택값을 나중에 재활용할 수 있게 저장할지 결정 |
+
