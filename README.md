@@ -318,13 +318,13 @@ vue create example_project
 
 ### 1. 타이포그래피 설정 옵션
 
-![image-20210710111312036](C:\Users\INNOGRID\AppData\Roaming\Typora\typora-user-images\image-20210710111312036.png) 
+![image-20210710111312036](./Images/typograpy_opt.png) 
 
 
 
 ### 2. 엘리먼트 여백 설정 옵션
 
-![image-20210710111718202](C:\Users\INNOGRID\AppData\Roaming\Typora\typora-user-images\image-20210710111718202.png) 
+![image-20210710111718202](./Images/element_opt.png) 
 
 - ex) .mt-3 : 바깥쪽 여백, top, 16px
 
@@ -355,7 +355,7 @@ text-코드명-정렬명
 - 코드명 : xs, sm, md, lg, xl
 - 정렬명 : left, center, right
 
-![image-20210710113545820](C:\Users\INNOGRID\AppData\Roaming\Typora\typora-user-images\image-20210710113545820.png) 
+![image-20210710113545820](./Images/text_opt.png) 
 
 > 기기별 정렬 옵션에서 중요한 것은 코드명이다.
 >
@@ -387,5 +387,5 @@ text-코드명-정렬명
 
 #### sm, xs일때 비교
 
-![image-20210710115613089](C:\Users\INNOGRID\AppData\Roaming\Typora\typora-user-images\image-20210710115613089.png) 
+![image-20210710115613089](./Images/responsive_grid.png) 
 
