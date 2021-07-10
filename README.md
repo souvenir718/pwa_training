@@ -10,6 +10,14 @@
 
 ![image-20210704132549417](./Images/service-worker.png)
 
+### 디자인 사이트
+
+1. [머터리얼 디자인 공식 웹사이트](material.io/icons)
+2. **[폰트어섬](fontawesome.com/icons) 👍**
+3. [머터리얼 디자인 아이콘](materialdesignicons.com)
+
+
+
 ## About Vue
 
 ### 머스태시와 v-bind 차이점
@@ -303,4 +311,81 @@ vue create example_project
 | Use history mode for router                | 라우터에서 히스토리 모드 사용 여부 결정                 |
 | Where do you prefer placing config...      | 설정값을 confg 파일과 package.json 중 어디서 할지 결정  |
 | Save this preset                           | 지금까지 선택값을 나중에 재활용할 수 있게 저장할지 결정 |
+
+
+
+## 뷰티파이
+
+### 1. 타이포그래피 설정 옵션
+
+![image-20210710111312036](C:\Users\INNOGRID\AppData\Roaming\Typora\typora-user-images\image-20210710111312036.png) 
+
+
+
+### 2. 엘리먼트 여백 설정 옵션
+
+![image-20210710111718202](C:\Users\INNOGRID\AppData\Roaming\Typora\typora-user-images\image-20210710111718202.png) 
+
+- ex) .mt-3 : 바깥쪽 여백, top, 16px
+
+
+
+### 3. 로렘픽숨
+
+: 빈 공간을 보여주는 대신 임의의 이미지를 규격에 맞게 표시하는 것
+
+- 사용방법 : picsum.photos/사진id/높이/너비/옵션
+
+```vue
+<v-card max-width="400">
+    <v-img src="https://picsum.photos/id/1068/400/300" aspect-ratio="2.3"></v-img>
+</v-card>
+```
+
+- `aspect-ratio` : 이미지의 가로:높이 비율에 맞춰서 자를 수 있다.
+
+
+
+### 4. 텍스트 정렬
+
+```
+text-코드명-정렬명
+```
+
+- 코드명 : xs, sm, md, lg, xl
+- 정렬명 : left, center, right
+
+![image-20210710113545820](C:\Users\INNOGRID\AppData\Roaming\Typora\typora-user-images\image-20210710113545820.png) 
+
+> 기기별 정렬 옵션에서 중요한 것은 코드명이다.
+>
+> `text-sm-center`는 600~959 범위에 들어올때만 가운데 정렬이 적용된다.
+>
+> 그래서 `text-center`같이 코드명을 생략하면 모든 범위에서 가운데 정렬이 적용된다.
+
+
+
+### 5. 반응형 그리드
+
+```vue
+ <v-row>
+     <v-col cols="12" sm="6">
+         <h2 class="mb-3">About Beetle</h2>
+         <p>운동화는 나를 표현하는 하나의 방법이자 패션을 완성하는 필수템이다.</p>
+     </v-col>
+     <v-col cols="12" sm="6">
+         <h2 class="mb-3">Beetle's Target</h2>
+         <p>1. 운동화에 관심있는 사람은 누구나</p>
+         <p>1. 운동화에 관심있는 사람은 누구나</p>
+         <p>1. 운동화에 관심있는 사람은 누구나</p>
+         <p>1. 운동화에 관심있는 사람은 누구나</p>
+     </v-col>
+</v-row>
+```
+
+> `<v-col cols="12" sm="6">` 는 `xs`일 때는 열을 12개 사용하고 `sm`일 때는 열을 6개 사용한다는 의미
+
+#### sm, xs일때 비교
+
+![image-20210710115613089](C:\Users\INNOGRID\AppData\Roaming\Typora\typora-user-images\image-20210710115613089.png) 
 

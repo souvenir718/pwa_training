@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scalie=1, user-scalable=no, minimal-ui" />
+        <link href="https" />
+        <title>Document</title>
+        <!-- 모바일 기기의 접속 시 화면 크기 조절을 위해 뷰포트 설정 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+        <!-- vuetify.js에 필요한 스타일 파일 링크 연결 -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/@mdi/font@3.x/css/materialdesignicons.min.css" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/vuetify@2.2.x/dist/vuetify.min.css" rel="stylesheet" />
+        <style>
+            .border_style {
+                border-color: rgb(5, 121, 30);
+                border-width: 1px;
+                border-style: solid;
+                background-color: rgb(153, 204, 14);
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app">
+            <v-app>
+                <v-app-bar app color="warning" dark fixed>
+                    <v-app-bar-nav-icon></v-app-bar-nav-icon>
+                    <v-toolbar-title>마스터 페이지</v-toolbar-title>
+                    <v-spacer></v-spacer>
+                    <v-btn icon>
+                        <v-icon>mdi-dots-vertical</v-icon>
+                    </v-btn>
+                </v-app-bar>
+                <v-content>
+                    <v-container>
+                        <v-row text-center>
+                            <v-col cols="12" class="border_style">xs12</v-col>
+                            <v-col cols="6" class="border_style">xs12</v-col>
+                            <v-col cols="6" class="border_style">xs12</v-col>
+                            <v-col cols="4" class="border_style">xs12</v-col>
+                            <v-col cols="1" v-for="item in 12" v-bind:key="item.id" class="border_style"></v-col>
+                        </v-row>
+                        <br />
+                        <v-row text-center>
+                            <v-col class="border_style" cols="1" v-for="item in 20" v-bind:key="item.id"></v-col>
+                        </v-row>
+                    </v-container>
+                    <v-contaer fluid>
+                        <v-row text-center>
+                            <v-col class="border_style" sm="4"></v-col>
+                            <!-- offset으로 4개의 열 간격을 띄운다 -->
+                            <v-col class="border_style" sm="4" offset-sm="8"></v-col>
+                        </v-row>
+                    </v-contaer>
+                </v-content>
+                <v-footer color="secondary" dark fixed>
+                    <!-- mx-auto는 블록 레벨 엘리먼트의 내용을 가운데 정렬 -->
+                    <div class="mx-auto">Footer입니다.</div>
+                </v-footer>
+            </v-app>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+        <!-- 뷰티파이 CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/vuetify@2.2.x/dist/vuetify.js"></script>
+        <script>
+            new Vue({
+                el: "#app",
+                vuetify: new Vuetify(), // 뷰티파이 객체 생성
+            });
+        </script>
+    </body>
+</html>
