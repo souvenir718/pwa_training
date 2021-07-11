@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Hello Vue</title>
+        <!-- vue CDN에 연결 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/@mdi/font@3.x/css/materialdesignicons.min.css" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/vuetify@2.2.x/dist/vuetify.min.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div id="app">
+            <v-app>
+                <!-- 내용 영역에 선택된 메뉴명 표시. flexbox로 가운데 정렬 -->
+                <v-content>
+                    <v-card height="100%" class="d-flex display-2 align-center justify-center">선택 : {{sSelect}} </v-card>
+                </v-content>
+                <!-- 하단 영역에 바닥 내비게이션 메뉴를 absolute로 고정 -->
+                <v-footer>
+                    <!-- 선택된 메뉴는 sSelect 데이터를 연동해서 바인딩 -->
+                    <v-bottom-navigation absolute v-model="sSelect" dark>
+                        <v-btn text value="자전거">
+                            자전거
+                            <v-icon>directions_bike</v-icon>
+                        </v-btn>
+                        <v-btn text value="지하철">
+                            지하철
+                            <v-icon>subway</v-icon>
+                        </v-btn>
+                        <v-btn text value="버스">
+                            버스
+                            <v-icon>directions_bus</v-icon>
+                        </v-btn>
+                    </v-bottom-navigation>
+                </v-footer>
+            </v-app>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+        <!-- 뷰티파이 CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/vuetify@2.2.x/dist/vuetify.js"></script>
+        <script>
+            //  Vue 객체를 생성해 앱을 초기화하고 시작
+            new Vue({
+                // id 선택자인 main의 div 엘리먼트와 앱을 연결해서 구동
+                el: "#app",
+                vuetify: new Vuetify(),
+                data: {
+                    sSelect: "자전거",
+                },
+            });
+        </script>
+    </body>
+</html>
