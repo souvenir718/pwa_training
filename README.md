@@ -389,3 +389,20 @@ text-코드명-정렬명
 
 ![image-20210710115613089](./Images/responsive_grid.png) 
 
+
+
+### 6. 장면 전환 엘리먼트
+
+```vue
+<!-- 라우터 페이지 렌더링 -->
+<v-content>
+    <!-- 페이지 장면 전환 효과 넣기 -->
+    <v-slide-x-transition mode="out-in">
+        <router-view></router-view>
+    </v-slide-x-transition>
+</v-content>
+```
+
+![image-20210711124941299](./Images/transition1.png)  
+
+![image-20210711124949417](./Images/transition2.png)  
