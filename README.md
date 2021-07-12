@@ -406,3 +406,13 @@ text-코드명-정렬명
 ![image-20210711124941299](./Images/transition1.png)  
 
 ![image-20210711124949417](./Images/transition2.png)  
+
+
+
+## 워크박스
+
+ 웹앱의 오프라인 기능을 지원하는 자바스크립트 라이브러리
+
+### 캐시전략
+
+![image-20210711142743117](./Images/cache-strategy.png)  
